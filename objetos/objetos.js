@@ -42,7 +42,10 @@ const fiat = new Car("yellow", 2010)
 fiat
 
 
-//! 6 Crear objetos vacíos con new Object
+//! 6 Instancias 
+console.log( fiat instanceof Car)
+
+//! 7 Crear objetos vacíos con new Object
 
 const ArgentinaSinInflacion = new Object();
 
@@ -52,13 +55,13 @@ ArgentinaSinInflacion.futuro = "jajaja"
 ArgentinaSinInflacion
 
 
-//! 7 Crear objeto desde objeto con object create
+//! 8 Crear objeto desde objeto con object create
 
 const paisGeneroso = Object.create(ArgentinaSinInflacion)
 
 ArgentinaSinInflacion
 
-//! 8 POO Crear clase (EcmaScript 6)
+//! 9 POO Crear clase (EcmaScript 6)
 
 class Pet {
     constructor(legs,lifeExpectation, sound) {
@@ -77,7 +80,7 @@ const cat = new Pet(4, 15, "meaow")
 cat
 cat.call()
 
-//! 9 Herencia
+//! 10 Herencia
 
 class Cat extends Pet {
     constructor(legs,lifeExpectation, sound, nails) {
@@ -90,3 +93,4 @@ const miGata = new Cat(3,4,5,"rasguñan")
 
 miGata
 miGata.call()
+
