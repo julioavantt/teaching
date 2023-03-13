@@ -8,7 +8,7 @@ let man = {
 man
 
 
-//! 2 Eliminar propiedad de objeto
+/* //! 2 Eliminar propiedad de objeto
 
 delete man.age;
 
@@ -92,5 +92,5 @@ class Cat extends Pet {
 const miGata = new Cat(3,4,5,"rasguñan")
 
 miGata
-miGata.call()
+miGata.call() */
 
