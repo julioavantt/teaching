@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1 id="h1" class="pep"></h1>
+  </head>
+  <body>
+    <h1 id="idh1" class="pep" patito="cuace">hu</h1>
+
     <div>HOla</div>
-    <div><span>q</span></div>
+    <div>
+      <span>q</span>
+      <span>wq</span>
+    </div>
     <span id="span">fff</span>
     <script>
-        // Guardar en una variable el primer h1 encontrado
-        let h1 = document.querySelector("h1")
-        let span = document.querySelector("#span")
+      // Guardar en una variable el primer h1 encontrado
+      let h1 = document.querySelector("h1");
+      /*         let h1 = document.querySelector("h1"); // tag
+    let h1 = document.querySelector(".pep"); // clase
+    let h1 = document.querySelector("#idh1"); // clase
+    let h1 = document.querySelector("[patito='cuace']"); // atributo */
 
-        // Guardar en una variable una lista de div
-        let div = document.querySelectorAll("div")
+      let span = document.querySelector("#span");
 
-        // Todos los nodos tienen 3 propiedades
-        console.log("nodeType", h1.nodeType)
+      // Guardar en una variable una lista de div
+      let div = document.querySelectorAll("div");
+
+      // Todos los nodos tienen 3 propiedades
+      /* console.log("nodeType", h1.nodeType)
         console.log("nodeName", h1.nodeName)
-        console.log("nodeValue", span.nodeValue)
+        console.log("nodeValue", h1.nodeValue) */
 
-        // ChildNodes
-        console.log("childNodes", div[1].childNodes)
+      // Children
+      //console.log("children", div[1].children)
 
-        // Obtener atributo especìfico
-        console.log(h1.getAttribute("class"))
+      // Chequea si tiene atributos boolean
+      //console.log(div[0].hasAttributes())
+
+      // Obtener atributo especìfico
+      //console.log(h1.getAttribute("class"))
+
+      // Modificar texto
+      h1.innerText = "ASI PAP";
+
+      // Obtener texto
+      //console.log(h1.innerText)
+
+      // Modificar html interno
+      div[1].innerHTML = "<div><span>Enseño mal</span></div>";
+
+      // Obtener html interno
+      //console.log(div[1].innerHTML)
+
+      /*       let array = [1,2,3,4,5];
+
+        let array1 = array.map(num =>`<div>${num}</div>`);
+        div[1].innerHTML = array1.join().replaceAll(",", "") */
+
+      // next siblings
+      //console.log(div[0].nextSibling.nextSibling);
+
+      // previous siblings
+      //console.log(div[1].previousSibling.previousSibling);
+
+      // Style camelCase
+      h1.style.display = "block"
+      h1.style.fontSize = "40px"
+
+      // Modificar id
+      h1.id = "Fa"
+
+      // Crear elemento tag
+      let ul = document.createElement("ul")
+
+      document.body.appendChild(ul)
+
+      // Elimina hijo directo
+      //document.body.removeChild(h1)
+      div[1].children[0].removeChild(div[1].children[0].children[0])
+      ///ul.removeChild(ul.children[1])
     </script>
-</body>
+  </body>
 </html>
